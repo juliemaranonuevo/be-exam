@@ -2685,6 +2685,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     'Content-Type': 'application/json'
                   }
                 }).then(function (res) {
+                  _this2.$router.push({
+                    path: '/products'
+                  });
+
                   console.log(res.data.message);
                   _this2.errorMessage = false;
                   _this2.message = res.data.message;
@@ -22911,7 +22915,7 @@ var render = function() {
             { attrs: { id: "dashboard" } },
             [
               _c("router-link", { attrs: { to: "/products" } }, [
-                _c("i", { staticClass: "fa fa-th" }),
+                _c("i", { staticClass: "fa fa-cube" }),
                 _vm._v(" "),
                 _c("span", [_vm._v("Products")]),
                 _vm._v(" "),
@@ -22926,9 +22930,9 @@ var render = function() {
             { attrs: { id: "dashboard" } },
             [
               _c("router-link", { attrs: { to: "/videos" } }, [
-                _c("i", { staticClass: "fa fa-th" }),
+                _c("i", { staticClass: "fa fa-film" }),
                 _vm._v(" "),
-                _c("span", [_vm._v("Vidoes")]),
+                _c("span", [_vm._v("Videos")]),
                 _vm._v(" "),
                 _c("span", { staticClass: "pull-right-container" })
               ])

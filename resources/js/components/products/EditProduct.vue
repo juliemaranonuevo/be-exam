@@ -207,6 +207,7 @@ export default {
                 }
             })
             .then((res) => {
+                this.$router.push({ path: '/products' });
                 console.log(res.data.message);
                 this.errorMessage = false;
                 this.message = res.data.message;
