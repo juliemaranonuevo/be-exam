@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <Header />
-        <Sidebar />
+        <Sidebar @videoLink="loadTheVideo"/>
         <div class="content-wrapper">
             <section class="content-header" style="margin-bottom: 50px;">
                 <!-- <h1>
@@ -13,7 +13,7 @@
                     <li class="active">Products</li>
                 </ol>
             </section>
-            <router-view></router-view>
+            <router-view :src="src" @result="getResponse" :res="response"></router-view>
         </div>
         <Footer />
     </div>
@@ -25,13 +25,29 @@ import Header from './Header';
 import Footer from './Footer';
 export default {
     name: 'App',
-     components: {
+    data() {
+        return {
+            src: '../../storage/videos/a.mp4',
+            response: ''
+        }
+    },
+    components: {
         Header,
         Sidebar,
         Footer
     },
     mounted() {
         console.log('Component mounted.')
+    },
+    methods: {
+        loadTheVideo(link) {
+            this.src = link;
+        },
+        getResponse(Res) {
+            console.log('hahaha');
+            // this.response = Res;
+            // console.log(Res);
+        }
     }
 }
 </script>

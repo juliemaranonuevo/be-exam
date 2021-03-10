@@ -37,6 +37,8 @@
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<!-- <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script> -->
+
 <script>
 $( function () {
     $('.select2').select2({

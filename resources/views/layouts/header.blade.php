@@ -26,4 +26,7 @@
   <link rel="stylesheet" href="/vendor/AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Bootstrap time Picker -->
   <link rel="stylesheet" href="/vendor/AdminLTE/plugins/timepicker/bootstrap-timepicker.min.css">
+
+
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 </head>

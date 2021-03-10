@@ -77,8 +77,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
                     </div>
                     <div class="box-body table-responsive no-padding">
                         <table style="overflow-x: auto; font-size: 15px;" class="table table-bordered
@@ -173,6 +171,9 @@
 
 export default {
     name: 'ProductList',
+    props: [
+        "res"
+    ],
     data() {
         return {
             items: {

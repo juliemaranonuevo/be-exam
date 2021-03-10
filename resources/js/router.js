@@ -4,7 +4,7 @@ import Product from './pages/Product.vue';
 import AddProduct from './components/products/AddProduct.vue';
 import ProductList from './components/products/ProductList.vue';
 import EditProduct from './components/products/EditProduct.vue';
-import examplevideo from './components/examplevideo.vue';
+import Video from './components/Video.vue';
 
 Vue.use(VueRouter);
 
@@ -38,7 +38,7 @@ export default new VueRouter({
         },
         {
             path: '/videos',
-            component: examplevideo
+            component: Video
         }
     ],
     mode: 'history'
