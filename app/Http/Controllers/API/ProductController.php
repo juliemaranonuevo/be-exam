@@ -53,7 +53,7 @@ class ProductController extends Controller
         $images = [];
         for ($file = 0; $file < $imageCount; $file++) {
             $extension_name = $request->images[$file]->getClientOriginalExtension();
-            $image_path = $request->images[$file]->storeAS('public/images', uniqid().'.'.$extension_name);
+            $image_path = $request->images[$file]->storeAS('/images', uniqid().'.'.$extension_name);
             $images[] = $image_path;
         }
         

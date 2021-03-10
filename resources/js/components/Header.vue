@@ -11,17 +11,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="hidden-xs">Juliemar</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="user-footer">
-                <div class="pull-right">
-                  <a href="" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-                
-              </li>
-            </ul>
+             <a href="" class="btn btn-flat" @click="logout">Sign out</a>
           </li>
           <!-- Control Sidebar Toggle Button -->
         </ul>
@@ -36,8 +26,21 @@ export default {
     mounted() {
         console.log('Component mounted.')
     },
-    method: {
-
+    methods: {
+        async logout() {
+            await axios.post(`/logout`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        }
     }
 }
 </script>

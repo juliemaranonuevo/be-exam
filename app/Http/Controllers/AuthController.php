@@ -17,6 +17,7 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
+        
         $login = request()->input('login');
         $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         // if ($fieldType == 'email') {
@@ -33,16 +34,17 @@ class AuthController extends Controller
         
 
         request()->merge([$fieldType => $login]);
-        
 
+        $remember = $request->has('remember') ? true : false;
+        
         $credentials = request([$fieldType, 'password']);
      
-        if ( !Auth::attempt($credentials) ) {
+        if ( !Auth::attempt($credentials, $remember) ) {
           
             return back()->withErrors('Invalid email or password')->withInput( $request->all );
 
         }
-        
+
         return redirect('/');
     }
 
@@ -54,15 +56,10 @@ class AuthController extends Controller
      */
     public function destroy()
     {
-        //save the user action.
-        $auditTrail = new AuditTrail;
-        $auditTrail->action = 'Logged Out.';
-        $auditTrail->user_id = Auth::user()->id;
-        $auditTrail->save();
-
         Auth::logout();
-
-        return redirect('/');
+        return response()->json([
+            "message" => 'Success',
+        ], 200);
     }
 
 }

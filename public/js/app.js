@@ -3251,16 +3251,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -3288,7 +3286,34 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log('Component mounted.');
   },
-  method: {}
+  methods: {
+    logout: function logout() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.post("/logout", {
+                  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  }
+                }).then(function (res) {
+                  console.log(res);
+                })["catch"](function (err) {
+                  console.log(err);
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  }
 });
 
 /***/ }),
@@ -84841,7 +84866,7 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "active" }, [_vm._v("Products")])
+          _c("li", { staticClass: "active" }, [_vm._v("Praxxys - Exam")])
         ])
       ]
     )
@@ -84906,67 +84931,55 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("header", { staticClass: "main-header" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("nav", { staticClass: "navbar navbar-static-top " }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "navbar-custom-menu" }, [
+        _c("ul", { staticClass: "nav navbar-nav" }, [
+          _c("li", { staticClass: "dropdown user user-menu" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-flat",
+                attrs: { href: "" },
+                on: { click: _vm.logout }
+              },
+              [_vm._v("Sign out")]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", { staticClass: "main-header" }, [
-      _c("a", { staticClass: "logo", attrs: { href: "" } }, [
-        _c("span", { staticClass: "logo-mini" }, [_c("b", [_vm._v("PE")])]),
-        _vm._v(" "),
-        _c("span", { staticClass: "logo-lg" }, [
-          _c("b", [_vm._v("PRAXXYS - Exam")])
-        ])
-      ]),
+    return _c("a", { staticClass: "logo", attrs: { href: "" } }, [
+      _c("span", { staticClass: "logo-mini" }, [_c("b", [_vm._v("PE")])]),
       _vm._v(" "),
-      _c("nav", { staticClass: "navbar navbar-static-top " }, [
-        _c(
-          "a",
-          {
-            staticClass: "sidebar-toggle",
-            attrs: { href: "#", "data-toggle": "push-menu", role: "button" }
-          },
-          [
-            _c("span", { staticClass: "sr-only" }, [
-              _vm._v("Toggle navigation")
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "navbar-custom-menu" }, [
-          _c("ul", { staticClass: "nav navbar-nav" }, [
-            _c("li", { staticClass: "dropdown user user-menu" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "dropdown-toggle",
-                  attrs: { href: "#", "data-toggle": "dropdown" }
-                },
-                [_c("span", { staticClass: "hidden-xs" }, [_vm._v("Juliemar")])]
-              ),
-              _vm._v(" "),
-              _c("ul", { staticClass: "dropdown-menu" }, [
-                _c("li", { staticClass: "user-footer" }, [
-                  _c("div", { staticClass: "pull-right" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-default btn-flat",
-                        attrs: { href: "" }
-                      },
-                      [_vm._v("Sign out")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
+      _c("span", { staticClass: "logo-lg" }, [
+        _c("b", [_vm._v("PRAXXYS - Exam")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "sidebar-toggle",
+        attrs: { href: "#", "data-toggle": "push-menu", role: "button" }
+      },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Toggle navigation")])]
+    )
   }
 ]
 render._withStripped = true
