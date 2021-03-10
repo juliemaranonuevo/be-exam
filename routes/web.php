@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', function () {
-    return view('home');
-})->where('any', '.*');
+// Auth::routes();
+
+//LOGIN and LOGOUT
+Route::get('/login', 'AuthController@index')->name('login');
+Route::post('/login', 'AuthController@store');
+Route::post('/logout', 'AuthController@destroy')->name('logout');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/{any}', function () {
+        return view('home');
+    })->where('any', '.*');
+});

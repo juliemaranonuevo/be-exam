@@ -1,17 +1,12 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
-/* harmony export */ });
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -20,33 +15,30 @@ function _assertThisInitialized(self) {
   return self;
 }
 
+module.exports = _assertThisInitialized;
+
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/construct.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/construct.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/@babel/runtime/helpers/construct.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/construct.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _construct)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
-/* harmony import */ var _isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js");
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
 
+var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct */ "./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
 
 function _construct(Parent, args, Class) {
-  if ((0,_isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__.default)()) {
-    _construct = Reflect.construct;
+  if (isNativeReflectConstruct()) {
+    module.exports = _construct = Reflect.construct;
   } else {
-    _construct = function _construct(Parent, args, Class) {
+    module.exports = _construct = function _construct(Parent, args, Class) {
       var a = [null];
       a.push.apply(a, args);
       var Constructor = Function.bind.apply(Parent, a);
       var instance = new Constructor();
-      if (Class) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(instance, Class.prototype);
+      if (Class) setPrototypeOf(instance, Class.prototype);
       return instance;
     };
   }
@@ -54,209 +46,7 @@ function _construct(Parent, args, Class) {
   return _construct.apply(null, arguments);
 }
 
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _extends)
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
-/* harmony export */ });
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inherits.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inherits.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inherits)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _isNativeReflectConstruct)
-/* harmony export */ });
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
-/* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-
-
-function _possibleConstructorReturn(self, call) {
-  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
-/* harmony export */ });
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _typeof)
-/* harmony export */ });
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
+module.exports = _construct;
 
 /***/ }),
 
@@ -281,12 +71,160 @@ function _extends() {
     return target;
   };
 
-  module.exports.default = module.exports, module.exports.__esModule = true;
   return _extends.apply(this, arguments);
 }
 
 module.exports = _extends;
-module.exports.default = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inherits;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \**************************************************************/
+/***/ ((module) => {
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+module.exports = _inheritsLoose;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js ***!
+  \*************************************************************************/
+/***/ ((module) => {
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+module.exports = _isNativeReflectConstruct;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+module.exports = _setPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
 
 /***/ }),
 
@@ -1439,7 +1377,6 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
-var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
 var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
 var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
@@ -1460,7 +1397,7 @@ module.exports = function xhrAdapter(config) {
     // HTTP basic authentication
     if (config.auth) {
       var username = config.auth.username || '';
-      var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+      var password = config.auth.password || '';
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
@@ -1541,6 +1478,8 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
+      var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
+
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
@@ -1606,7 +1545,7 @@ module.exports = function xhrAdapter(config) {
       });
     }
 
-    if (!requestData) {
+    if (requestData === undefined) {
       requestData = null;
     }
 
@@ -1673,9 +1612,6 @@ axios.all = function all(promises) {
   return Promise.all(promises);
 };
 axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
-
-// Expose isAxiosError
-axios.isAxiosError = __webpack_require__(/*! ./helpers/isAxiosError */ "./node_modules/axios/lib/helpers/isAxiosError.js");
 
 module.exports = axios;
 
@@ -1881,10 +1817,9 @@ Axios.prototype.getUri = function getUri(config) {
 utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url, config) {
-    return this.request(mergeConfig(config || {}, {
+    return this.request(utils.merge(config || {}, {
       method: method,
-      url: url,
-      data: (config || {}).data
+      url: url
     }));
   };
 });
@@ -1892,7 +1827,7 @@ utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData
 utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url, data, config) {
-    return this.request(mergeConfig(config || {}, {
+    return this.request(utils.merge(config || {}, {
       method: method,
       url: url,
       data: data
@@ -2147,7 +2082,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   error.response = response;
   error.isAxiosError = true;
 
-  error.toJSON = function toJSON() {
+  error.toJSON = function() {
     return {
       // Standard
       message: this.message,
@@ -2195,73 +2130,59 @@ module.exports = function mergeConfig(config1, config2) {
   config2 = config2 || {};
   var config = {};
 
-  var valueFromConfig2Keys = ['url', 'method', 'data'];
-  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy', 'params'];
+  var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
   var defaultToConfig2Keys = [
-    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
-    'timeout', 'timeoutMessage', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
-    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'decompress',
-    'maxContentLength', 'maxBodyLength', 'maxRedirects', 'transport', 'httpAgent',
-    'httpsAgent', 'cancelToken', 'socketPath', 'responseEncoding'
+    'baseURL', 'url', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
+    'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath'
   ];
-  var directMergeKeys = ['validateStatus'];
-
-  function getMergedValue(target, source) {
-    if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
-      return utils.merge(target, source);
-    } else if (utils.isPlainObject(source)) {
-      return utils.merge({}, source);
-    } else if (utils.isArray(source)) {
-      return source.slice();
-    }
-    return source;
-  }
-
-  function mergeDeepProperties(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(config1[prop], config2[prop]);
-    } else if (!utils.isUndefined(config1[prop])) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-  }
 
   utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(undefined, config2[prop]);
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
     }
   });
 
-  utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
+  utils.forEach(mergeDeepPropertiesKeys, function mergeDeepProperties(prop) {
+    if (utils.isObject(config2[prop])) {
+      config[prop] = utils.deepMerge(config1[prop], config2[prop]);
+    } else if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (utils.isObject(config1[prop])) {
+      config[prop] = utils.deepMerge(config1[prop]);
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
 
   utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(undefined, config2[prop]);
-    } else if (!utils.isUndefined(config1[prop])) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-  });
-
-  utils.forEach(directMergeKeys, function merge(prop) {
-    if (prop in config2) {
-      config[prop] = getMergedValue(config1[prop], config2[prop]);
-    } else if (prop in config1) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
     }
   });
 
   var axiosKeys = valueFromConfig2Keys
     .concat(mergeDeepPropertiesKeys)
-    .concat(defaultToConfig2Keys)
-    .concat(directMergeKeys);
+    .concat(defaultToConfig2Keys);
 
   var otherKeys = Object
-    .keys(config1)
-    .concat(Object.keys(config2))
+    .keys(config2)
     .filter(function filterAxiosKeys(key) {
       return axiosKeys.indexOf(key) === -1;
     });
 
-  utils.forEach(otherKeys, mergeDeepProperties);
+  utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
 
   return config;
 };
@@ -2289,7 +2210,7 @@ var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios
  */
 module.exports = function settle(resolve, reject, response) {
   var validateStatus = response.config.validateStatus;
-  if (!response.status || !validateStatus || validateStatus(response.status)) {
+  if (!validateStatus || validateStatus(response.status)) {
     resolve(response);
   } else {
     reject(createError(
@@ -2420,7 +2341,6 @@ var defaults = {
   xsrfHeaderName: 'X-XSRF-TOKEN',
 
   maxContentLength: -1,
-  maxBodyLength: -1,
 
   validateStatus: function validateStatus(status) {
     return status >= 200 && status < 300;
@@ -2481,6 +2401,7 @@ var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/util
 
 function encode(val) {
   return encodeURIComponent(val).
+    replace(/%40/gi, '@').
     replace(/%3A/gi, ':').
     replace(/%24/g, '$').
     replace(/%2C/gi, ',').
@@ -2658,28 +2579,6 @@ module.exports = function isAbsoluteURL(url) {
   // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
   // by any combination of letters, digits, plus, period, or hyphen.
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/axios/lib/helpers/isAxiosError.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/**
- * Determines whether the payload is an error thrown by Axios
- *
- * @param {*} payload The value to test
- * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
- */
-module.exports = function isAxiosError(payload) {
-  return (typeof payload === 'object') && (payload.isAxiosError === true);
 };
 
 
@@ -3004,21 +2903,6 @@ function isObject(val) {
 }
 
 /**
- * Determine if a value is a plain Object
- *
- * @param {Object} val The value to test
- * @return {boolean} True if value is a plain Object, otherwise false
- */
-function isPlainObject(val) {
-  if (toString.call(val) !== '[object Object]') {
-    return false;
-  }
-
-  var prototype = Object.getPrototypeOf(val);
-  return prototype === null || prototype === Object.prototype;
-}
-
-/**
  * Determine if a value is a Date
  *
  * @param {Object} val The value to test
@@ -3174,12 +3058,34 @@ function forEach(obj, fn) {
 function merge(/* obj1, obj2, obj3, ... */) {
   var result = {};
   function assignValue(val, key) {
-    if (isPlainObject(result[key]) && isPlainObject(val)) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
       result[key] = merge(result[key], val);
-    } else if (isPlainObject(val)) {
-      result[key] = merge({}, val);
-    } else if (isArray(val)) {
-      result[key] = val.slice();
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Function equal to merge with the difference being that no reference
+ * to original objects is kept.
+ *
+ * @see merge
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function deepMerge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = deepMerge(result[key], val);
+    } else if (typeof val === 'object') {
+      result[key] = deepMerge({}, val);
     } else {
       result[key] = val;
     }
@@ -3210,19 +3116,6 @@ function extend(a, b, thisArg) {
   return a;
 }
 
-/**
- * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
- *
- * @param {string} content with BOM
- * @return {string} content value without BOM
- */
-function stripBOM(content) {
-  if (content.charCodeAt(0) === 0xFEFF) {
-    content = content.slice(1);
-  }
-  return content;
-}
-
 module.exports = {
   isArray: isArray,
   isArrayBuffer: isArrayBuffer,
@@ -3232,7 +3125,6 @@ module.exports = {
   isString: isString,
   isNumber: isNumber,
   isObject: isObject,
-  isPlainObject: isPlainObject,
   isUndefined: isUndefined,
   isDate: isDate,
   isFile: isFile,
@@ -3243,9 +3135,9 @@ module.exports = {
   isStandardBrowserEnv: isStandardBrowserEnv,
   forEach: forEach,
   merge: merge,
+  deepMerge: deepMerge,
   extend: extend,
-  trim: trim,
-  stripBOM: stripBOM
+  trim: trim
 };
 
 
@@ -3391,20 +3283,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Header',
   mounted: function mounted() {
     console.log('Component mounted.');
-  }
+  },
+  method: {}
 });
 
 /***/ }),
@@ -4670,16 +4554,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
-
-
-
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
 
 vue__WEBPACK_IMPORTED_MODULE_1__.default.component('app', __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue").default);
 var app = new vue__WEBPACK_IMPORTED_MODULE_1__.default({
-  // el: '#app',
+  el: '#app',
   router: _router__WEBPACK_IMPORTED_MODULE_0__.default
-}).$mount('#app');
+});
 
 /***/ }),
 
@@ -4690,6 +4573,12 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__.default({
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -7249,15 +7138,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.21';
+  var VERSION = '4.17.20';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
   var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
-      FUNC_ERROR_TEXT = 'Expected a function',
-      INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
+      FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
   var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -7390,11 +7278,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   var reRegExpChar = /[\\^$.*+?()[\]{}|]/g,
       reHasRegExpChar = RegExp(reRegExpChar.source);
 
-  /** Used to match leading whitespace. */
-  var reTrimStart = /^\s+/;
-
-  /** Used to match a single whitespace character. */
-  var reWhitespace = /\s/;
+  /** Used to match leading and trailing whitespace. */
+  var reTrim = /^\s+|\s+$/g,
+      reTrimStart = /^\s+/,
+      reTrimEnd = /\s+$/;
 
   /** Used to match wrap detail comments. */
   var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/,
@@ -7403,18 +7290,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
   /** Used to match words composed of alphanumeric characters. */
   var reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
-
-  /**
-   * Used to validate the `validate` option in `_.template` variable.
-   *
-   * Forbids characters which could potentially change the meaning of the function argument definition:
-   * - "()," (modification of function parameters)
-   * - "=" (default value)
-   * - "[]{}" (destructuring of function parameters)
-   * - "/" (beginning of a comment)
-   * - whitespace
-   */
-  var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
 
   /** Used to match backslashes in property paths. */
   var reEscapeChar = /\\(\\)?/g;
@@ -8245,19 +8120,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   }
 
   /**
-   * The base implementation of `_.trim`.
-   *
-   * @private
-   * @param {string} string The string to trim.
-   * @returns {string} Returns the trimmed string.
-   */
-  function baseTrim(string) {
-    return string
-      ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
-      : string;
-  }
-
-  /**
    * The base implementation of `_.unary` without support for storing metadata.
    *
    * @private
@@ -8588,21 +8450,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     return hasUnicode(string)
       ? unicodeToArray(string)
       : asciiToArray(string);
-  }
-
-  /**
-   * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
-   * character of `string`.
-   *
-   * @private
-   * @param {string} string The string to inspect.
-   * @returns {number} Returns the index of the last non-whitespace character.
-   */
-  function trimmedEndIndex(string) {
-    var index = string.length;
-
-    while (index-- && reWhitespace.test(string.charAt(index))) {}
-    return index;
   }
 
   /**
@@ -19773,7 +19620,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
       if (typeof value != 'string') {
         return value === 0 ? value : +value;
       }
-      value = baseTrim(value);
+      value = value.replace(reTrim, '');
       var isBinary = reIsBinary.test(value);
       return (isBinary || reIsOctal.test(value))
         ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -22145,12 +21992,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
-      // Throw an error if a forbidden character was found in `variable`, to prevent
-      // potential command injection attacks.
-      else if (reForbiddenIdentifierChars.test(variable)) {
-        throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
-      }
-
       // Cleanup code by stripping empty strings.
       source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
         .replace(reEmptyStringMiddle, '$1')
@@ -22264,7 +22105,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     function trim(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return baseTrim(string);
+        return string.replace(reTrim, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -22299,7 +22140,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     function trimEnd(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return string.slice(0, trimmedEndIndex(string) + 1);
+        return string.replace(reTrimEnd, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -24453,11 +24294,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ParseStream": () => (/* binding */ ParseStream),
 /* harmony export */   "Parser": () => (/* binding */ Parser)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _videojs_vhs_utils_dist_stream_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @videojs/vhs-utils/dist/stream.js */ "./node_modules/@videojs/vhs-utils/dist/stream.js");
 /* harmony import */ var _videojs_vhs_utils_dist_stream_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_videojs_vhs_utils_dist_stream_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _videojs_vhs_utils_dist_decode_b64_to_uint8_array_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @videojs/vhs-utils/dist/decode-b64-to-uint8-array.js */ "./node_modules/@videojs/vhs-utils/dist/decode-b64-to-uint8-array.js");
 /* harmony import */ var _videojs_vhs_utils_dist_decode_b64_to_uint8_array_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_videojs_vhs_utils_dist_decode_b64_to_uint8_array_js__WEBPACK_IMPORTED_MODULE_4__);
 /*! @name m3u8-parser @version 4.5.0 @license Apache-2.0 */
@@ -24478,7 +24322,7 @@ __webpack_require__.r(__webpack_exports__);
 var LineStream =
 /*#__PURE__*/
 function (_Stream) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(LineStream, _Stream);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(LineStream, _Stream);
 
   function LineStream() {
     var _this;
@@ -24584,7 +24428,7 @@ var parseAttributes = function parseAttributes(attributes) {
 var ParseStream =
 /*#__PURE__*/
 function (_Stream) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(ParseStream, _Stream);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(ParseStream, _Stream);
 
   function ParseStream() {
     var _this;
@@ -25167,7 +25011,7 @@ function (_Stream) {
 var Parser =
 /*#__PURE__*/
 function (_Stream) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(Parser, _Stream);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(Parser, _Stream);
 
   function Parser() {
     var _this;
@@ -25180,7 +25024,7 @@ function (_Stream) {
     /* eslint-disable consistent-this */
 
 
-    var self = (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+    var self = _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
     /* eslint-enable consistent-this */
 
 
@@ -25434,7 +25278,7 @@ function (_Stream) {
                 currentUri.attributes = {};
               }
 
-              (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__.default)(currentUri.attributes, entry.attributes);
+              _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default()(currentUri.attributes, entry.attributes);
             },
             media: function media() {
               this.manifest.mediaGroups = this.manifest.mediaGroups || defaultMediaGroups;
@@ -31195,11 +31039,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var global_window__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(global_window__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var global_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! global/document */ "./node_modules/global/document.js");
 /* harmony import */ var global_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(global_document__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var safe_json_parse_tuple__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! safe-json-parse/tuple */ "./node_modules/safe-json-parse/tuple.js");
 /* harmony import */ var safe_json_parse_tuple__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(safe_json_parse_tuple__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var keycode__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! keycode */ "./node_modules/keycode/index.js");
@@ -31208,8 +31057,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _videojs_xhr__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_videojs_xhr__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var videojs_vtt_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! videojs-vtt.js */ "./node_modules/videojs-vtt.js/lib/browser-index.js");
 /* harmony import */ var videojs_vtt_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(videojs_vtt_js__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime/helpers/construct */ "./node_modules/@babel/runtime/helpers/esm/construct.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime/helpers/construct */ "./node_modules/@babel/runtime/helpers/construct.js");
+/* harmony import */ var _babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _videojs_vhs_utils_dist_resolve_url_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @videojs/vhs-utils/dist/resolve-url.js */ "./node_modules/@videojs/vhs-utils/dist/resolve-url.js");
 /* harmony import */ var _videojs_vhs_utils_dist_resolve_url_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_videojs_vhs_utils_dist_resolve_url_js__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var m3u8_parser__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! m3u8-parser */ "./node_modules/m3u8-parser/dist/m3u8-parser.es.js");
@@ -31661,7 +31512,7 @@ function assign(target) {
   }
 
   if (Object.assign) {
-    return _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__.default.apply(void 0, [target].concat(sources));
+    return _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default().apply(void 0, [target].concat(sources));
   }
 
   sources.forEach(function (source) {
@@ -37021,7 +36872,7 @@ var MODAL_CLASS_NAME = 'vjs-modal-dialog';
  */
 
 var ModalDialog = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ModalDialog, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ModalDialog, _Component);
 
   /**
    * Create an instance of this class.
@@ -37541,7 +37392,7 @@ Component.registerComponent('ModalDialog', ModalDialog);
  */
 
 var TrackList = /*#__PURE__*/function (_EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TrackList, _EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TrackList, _EventTarget);
 
   /**
    * Create an instance of this class
@@ -37567,7 +37418,7 @@ var TrackList = /*#__PURE__*/function (_EventTarget) {
      * @instance
      */
 
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'length', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'length', {
       get: function get() {
         return this.tracks_.length;
       }
@@ -37774,7 +37625,7 @@ var disableOthers = function disableOthers(list, track) {
 
 
 var AudioTrackList = /*#__PURE__*/function (_TrackList) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(AudioTrackList, _TrackList);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(AudioTrackList, _TrackList);
 
   /**
    * Create an instance of this class.
@@ -37894,7 +37745,7 @@ var disableOthers$1 = function disableOthers(list, track) {
 
 
 var VideoTrackList = /*#__PURE__*/function (_TrackList) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VideoTrackList, _TrackList);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VideoTrackList, _TrackList);
 
   /**
    * Create an instance of this class.
@@ -37925,7 +37776,7 @@ var VideoTrackList = /*#__PURE__*/function (_TrackList) {
      *         The current index of the selected {@link VideoTrack`}.
      */
 
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'selectedIndex', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'selectedIndex', {
       get: function get() {
         for (var _i = 0; _i < this.length; _i++) {
           if (this[_i].selected) {
@@ -38005,7 +37856,7 @@ var VideoTrackList = /*#__PURE__*/function (_TrackList) {
  */
 
 var TextTrackList = /*#__PURE__*/function (_TrackList) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrackList, _TrackList);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrackList, _TrackList);
 
   function TextTrackList() {
     return _TrackList.apply(this, arguments) || this;
@@ -38382,7 +38233,7 @@ var TextTrackMode = {
  */
 
 var Track = /*#__PURE__*/function (_EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Track, _EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Track, _EventTarget);
 
   /**
    * Create an instance of this class.
@@ -38447,7 +38298,7 @@ var Track = /*#__PURE__*/function (_EventTarget) {
      */
 
     var _loop = function _loop(key) {
-      Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), key, {
+      Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), key, {
         get: function get() {
           return trackProps[key];
         },
@@ -38468,7 +38319,7 @@ var Track = /*#__PURE__*/function (_EventTarget) {
      */
 
 
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'label', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'label', {
       get: function get() {
         return label;
       },
@@ -38787,7 +38638,7 @@ var loadTrack = function loadTrack(src, track) {
 
 
 var TextTrack = /*#__PURE__*/function (_Track) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrack, _Track);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrack, _Track);
 
   /**
    * Create an instance of this class.
@@ -38853,7 +38704,7 @@ var TextTrack = /*#__PURE__*/function (_Track) {
     var cues = new TextTrackCueList(_this.cues_);
     var activeCues = new TextTrackCueList(_this.activeCues_);
     var changed = false;
-    var timeupdateHandler = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), function () {
+    var timeupdateHandler = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), function () {
       if (!this.tech_.isReady_ || this.tech_.isDisposed()) {
         return;
       } // Accessing this.activeCues for the side-effects of updating itself
@@ -38880,7 +38731,7 @@ var TextTrack = /*#__PURE__*/function (_Track) {
       _this.tech_.on('timeupdate', timeupdateHandler);
     }
 
-    Object.defineProperties((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), {
+    Object.defineProperties(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), {
       /**
        * @memberof TextTrack
        * @member {boolean} default
@@ -39024,7 +38875,7 @@ var TextTrack = /*#__PURE__*/function (_Track) {
       }
 
       if (_this.preload_ || default_ || settings.kind !== 'subtitles' && settings.kind !== 'captions') {
-        loadTrack(_this.src, (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+        loadTrack(_this.src, _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
       }
     } else {
       _this.loaded_ = true;
@@ -39112,7 +38963,7 @@ TextTrack.prototype.allowedEvents_ = {
  */
 
 var AudioTrack = /*#__PURE__*/function (_Track) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(AudioTrack, _Track);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(AudioTrack, _Track);
 
   /**
    * Create an instance of this class.
@@ -39158,7 +39009,7 @@ var AudioTrack = /*#__PURE__*/function (_Track) {
      * @fires VideoTrack#selectedchange
      */
 
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'enabled', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'enabled', {
       get: function get() {
         return enabled;
       },
@@ -39205,7 +39056,7 @@ var AudioTrack = /*#__PURE__*/function (_Track) {
  */
 
 var VideoTrack = /*#__PURE__*/function (_Track) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VideoTrack, _Track);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VideoTrack, _Track);
 
   /**
    * Create an instance of this class.
@@ -39250,7 +39101,7 @@ var VideoTrack = /*#__PURE__*/function (_Track) {
      * @fires VideoTrack#selectedchange
      */
 
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'selected', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'selected', {
       get: function get() {
         return selected;
       },
@@ -39306,7 +39157,7 @@ var ERROR = 3;
  */
 
 var HTMLTrackElement = /*#__PURE__*/function (_EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(HTMLTrackElement, _EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(HTMLTrackElement, _EventTarget);
 
   /**
    * Create an instance of this class.
@@ -39357,7 +39208,7 @@ var HTMLTrackElement = /*#__PURE__*/function (_EventTarget) {
     _this.srclang = track.language;
     _this.label = track.label;
     _this["default"] = track["default"];
-    Object.defineProperties((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), {
+    Object.defineProperties(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), {
       /**
        * @memberof HTMLTrackElement
        * @member {HTMLTrackElement~ReadyState} readyState
@@ -39394,7 +39245,7 @@ var HTMLTrackElement = /*#__PURE__*/function (_EventTarget) {
 
       _this.trigger({
         type: 'load',
-        target: (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this)
+        target: _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this)
       });
     });
     return _this;
@@ -39454,7 +39305,7 @@ var REMOTE = {
   }
 };
 
-var ALL = (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__.default)({}, NORMAL, REMOTE);
+var ALL = _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default()({}, NORMAL, REMOTE);
 
 REMOTE.names = Object.keys(REMOTE);
 NORMAL.names = Object.keys(NORMAL);
@@ -39529,7 +39380,7 @@ function createTrackHelper(self, kind, label, language, options) {
 
 
 var Tech = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Tech, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Tech, _Component);
 
   /**
   * Create an instance of this Tech.
@@ -41433,7 +41284,7 @@ function fixSource(src) {
  */
 
 var MediaLoader = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MediaLoader, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MediaLoader, _Component);
 
   /**
    * Create an instance of this class.
@@ -41497,7 +41348,7 @@ Component.registerComponent('MediaLoader', MediaLoader);
  */
 
 var ClickableComponent = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ClickableComponent, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ClickableComponent, _Component);
 
   /**
    * Creates an instance of this class.
@@ -41756,7 +41607,7 @@ Component.registerComponent('ClickableComponent', ClickableComponent);
  */
 
 var PosterImage = /*#__PURE__*/function (_ClickableComponent) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PosterImage, _ClickableComponent);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PosterImage, _ClickableComponent);
 
   /**
    * Create an instance of this class.
@@ -41774,7 +41625,7 @@ var PosterImage = /*#__PURE__*/function (_ClickableComponent) {
 
     _this.update();
 
-    player.on('posterchange', bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update));
+    player.on('posterchange', bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update));
     return _this;
   }
   /**
@@ -41958,7 +41809,7 @@ function tryUpdateStyle(el, style, rule) {
 
 
 var TextTrackDisplay = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrackDisplay, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrackDisplay, _Component);
 
   /**
    * Creates an instance of this class.
@@ -41976,15 +41827,15 @@ var TextTrackDisplay = /*#__PURE__*/function (_Component) {
     var _this;
 
     _this = _Component.call(this, player, options, ready) || this;
-    var updateDisplayHandler = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.updateDisplay);
-    player.on('loadstart', bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.toggleDisplay));
+    var updateDisplayHandler = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.updateDisplay);
+    player.on('loadstart', bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.toggleDisplay));
     player.on('texttrackchange', updateDisplayHandler);
-    player.on('loadedmetadata', bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.preselectTrack)); // This used to be called during player init, but was causing an error
+    player.on('loadedmetadata', bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.preselectTrack)); // This used to be called during player init, but was causing an error
     // if a track should show by default and the display hadn't loaded yet.
     // Should probably be moved to an external track loader when we support
     // tracks that don't need a display.
 
-    player.ready(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), function () {
+    player.ready(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), function () {
       if (player.tech_ && player.tech_.featuresNativeTextTracks) {
         this.hide();
         return;
@@ -42306,7 +42157,7 @@ Component.registerComponent('TextTrackDisplay', TextTrackDisplay);
  */
 
 var LoadingSpinner = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(LoadingSpinner, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(LoadingSpinner, _Component);
 
   function LoadingSpinner() {
     return _Component.apply(this, arguments) || this;
@@ -42349,7 +42200,7 @@ Component.registerComponent('LoadingSpinner', LoadingSpinner);
  */
 
 var Button = /*#__PURE__*/function (_ClickableComponent) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Button, _ClickableComponent);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Button, _ClickableComponent);
 
   function Button() {
     return _ClickableComponent.apply(this, arguments) || this;
@@ -42485,7 +42336,7 @@ Component.registerComponent('Button', Button);
  */
 
 var BigPlayButton = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(BigPlayButton, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(BigPlayButton, _Button);
 
   function BigPlayButton(player, options) {
     var _this;
@@ -42590,7 +42441,7 @@ Component.registerComponent('BigPlayButton', BigPlayButton);
  */
 
 var CloseButton = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(CloseButton, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(CloseButton, _Button);
 
   /**
   * Creates an instance of the this class.
@@ -42691,7 +42542,7 @@ Component.registerComponent('CloseButton', CloseButton);
  */
 
 var PlayToggle = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PlayToggle, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PlayToggle, _Button);
 
   /**
    * Creates an instance of this class.
@@ -42941,7 +42792,7 @@ function formatTime(seconds, guide) {
  */
 
 var TimeDisplay = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TimeDisplay, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TimeDisplay, _Component);
 
   /**
    * Creates an instance of this class.
@@ -43093,7 +42944,7 @@ Component.registerComponent('TimeDisplay', TimeDisplay);
  */
 
 var CurrentTimeDisplay = /*#__PURE__*/function (_TimeDisplay) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(CurrentTimeDisplay, _TimeDisplay);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(CurrentTimeDisplay, _TimeDisplay);
 
   function CurrentTimeDisplay() {
     return _TimeDisplay.apply(this, arguments) || this;
@@ -43163,7 +43014,7 @@ Component.registerComponent('CurrentTimeDisplay', CurrentTimeDisplay);
  */
 
 var DurationDisplay = /*#__PURE__*/function (_TimeDisplay) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(DurationDisplay, _TimeDisplay);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(DurationDisplay, _TimeDisplay);
 
   /**
    * Creates an instance of this class.
@@ -43257,7 +43108,7 @@ Component.registerComponent('DurationDisplay', DurationDisplay);
  */
 
 var TimeDivider = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TimeDivider, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TimeDivider, _Component);
 
   function TimeDivider() {
     return _Component.apply(this, arguments) || this;
@@ -43295,7 +43146,7 @@ Component.registerComponent('TimeDivider', TimeDivider);
  */
 
 var RemainingTimeDisplay = /*#__PURE__*/function (_TimeDisplay) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(RemainingTimeDisplay, _TimeDisplay);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(RemainingTimeDisplay, _TimeDisplay);
 
   /**
    * Creates an instance of this class.
@@ -43404,7 +43255,7 @@ Component.registerComponent('RemainingTimeDisplay', RemainingTimeDisplay);
  */
 
 var LiveDisplay = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(LiveDisplay, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(LiveDisplay, _Component);
 
   /**
    * Creates an instance of this class.
@@ -43487,7 +43338,7 @@ Component.registerComponent('LiveDisplay', LiveDisplay);
  */
 
 var SeekToLive = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SeekToLive, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SeekToLive, _Button);
 
   /**
    * Creates an instance of this class.
@@ -43611,7 +43462,7 @@ var clamp = function clamp(number, min, max) {
  */
 
 var Slider = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Slider, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Slider, _Component);
 
   /**
   * Create an instance of this class
@@ -43985,7 +43836,7 @@ var percentify = function percentify(time, end) {
 
 
 var LoadProgressBar = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(LoadProgressBar, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(LoadProgressBar, _Component);
 
   /**
    * Creates an instance of this class.
@@ -44122,7 +43973,7 @@ Component.registerComponent('LoadProgressBar', LoadProgressBar);
  */
 
 var TimeTooltip = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TimeTooltip, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TimeTooltip, _Component);
 
   /**
    * Creates an instance of this class.
@@ -44137,7 +43988,7 @@ var TimeTooltip = /*#__PURE__*/function (_Component) {
     var _this;
 
     _this = _Component.call(this, player, options) || this;
-    _this.update = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update), UPDATE_REFRESH_INTERVAL);
+    _this.update = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update), UPDATE_REFRESH_INTERVAL);
     return _this;
   }
   /**
@@ -44285,7 +44136,7 @@ Component.registerComponent('TimeTooltip', TimeTooltip);
  */
 
 var PlayProgressBar = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PlayProgressBar, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PlayProgressBar, _Component);
 
   /**
    * Creates an instance of this class.
@@ -44300,7 +44151,7 @@ var PlayProgressBar = /*#__PURE__*/function (_Component) {
     var _this;
 
     _this = _Component.call(this, player, options) || this;
-    _this.update = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update), UPDATE_REFRESH_INTERVAL);
+    _this.update = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update), UPDATE_REFRESH_INTERVAL);
     return _this;
   }
   /**
@@ -44374,7 +44225,7 @@ Component.registerComponent('PlayProgressBar', PlayProgressBar);
  */
 
 var MouseTimeDisplay = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MouseTimeDisplay, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MouseTimeDisplay, _Component);
 
   /**
    * Creates an instance of this class.
@@ -44389,7 +44240,7 @@ var MouseTimeDisplay = /*#__PURE__*/function (_Component) {
     var _this;
 
     _this = _Component.call(this, player, options) || this;
-    _this.update = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update), UPDATE_REFRESH_INTERVAL);
+    _this.update = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update), UPDATE_REFRESH_INTERVAL);
     return _this;
   }
   /**
@@ -44455,7 +44306,7 @@ var PAGE_KEY_MULTIPLIER = 12;
  */
 
 var SeekBar = /*#__PURE__*/function (_Slider) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SeekBar, _Slider);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SeekBar, _Slider);
 
   /**
    * Creates an instance of this class.
@@ -44915,7 +44766,7 @@ Component.registerComponent('SeekBar', SeekBar);
  */
 
 var ProgressControl = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ProgressControl, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ProgressControl, _Component);
 
   /**
    * Creates an instance of this class.
@@ -44930,8 +44781,8 @@ var ProgressControl = /*#__PURE__*/function (_Component) {
     var _this;
 
     _this = _Component.call(this, player, options) || this;
-    _this.handleMouseMove = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleMouseMove), UPDATE_REFRESH_INTERVAL);
-    _this.throttledHandleMouseSeek = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleMouseSeek), UPDATE_REFRESH_INTERVAL);
+    _this.handleMouseMove = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleMouseMove), UPDATE_REFRESH_INTERVAL);
+    _this.throttledHandleMouseSeek = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleMouseSeek), UPDATE_REFRESH_INTERVAL);
 
     _this.enable();
 
@@ -45143,7 +44994,7 @@ Component.registerComponent('ProgressControl', ProgressControl);
  */
 
 var PictureInPictureToggle = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PictureInPictureToggle, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PictureInPictureToggle, _Button);
 
   /**
    * Creates an instance of this class.
@@ -45259,7 +45110,7 @@ Component.registerComponent('PictureInPictureToggle', PictureInPictureToggle);
  */
 
 var FullscreenToggle = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(FullscreenToggle, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(FullscreenToggle, _Button);
 
   /**
    * Creates an instance of this class.
@@ -45382,7 +45233,7 @@ var checkVolumeSupport = function checkVolumeSupport(self, player) {
  */
 
 var VolumeLevel = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VolumeLevel, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VolumeLevel, _Component);
 
   function VolumeLevel() {
     return _Component.apply(this, arguments) || this;
@@ -45415,7 +45266,7 @@ Component.registerComponent('VolumeLevel', VolumeLevel);
  */
 
 var VolumeBar = /*#__PURE__*/function (_Slider) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VolumeBar, _Slider);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VolumeBar, _Slider);
 
   /**
    * Creates an instance of this class.
@@ -45612,7 +45463,7 @@ Component.registerComponent('VolumeBar', VolumeBar);
  */
 
 var VolumeControl = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VolumeControl, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VolumeControl, _Component);
 
   /**
    * Creates an instance of this class.
@@ -45640,8 +45491,8 @@ var VolumeControl = /*#__PURE__*/function (_Component) {
 
     _this = _Component.call(this, player, options) || this; // hide this control if volume support is missing
 
-    checkVolumeSupport((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), player);
-    _this.throttledHandleMouseMove = throttle(bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleMouseMove), UPDATE_REFRESH_INTERVAL);
+    checkVolumeSupport(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), player);
+    _this.throttledHandleMouseMove = throttle(bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleMouseMove), UPDATE_REFRESH_INTERVAL);
 
     _this.on('mousedown', _this.handleMouseDown);
 
@@ -45788,7 +45639,7 @@ var checkMuteSupport = function checkMuteSupport(self, player) {
  */
 
 var MuteToggle = /*#__PURE__*/function (_Button) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MuteToggle, _Button);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MuteToggle, _Button);
 
   /**
    * Creates an instance of this class.
@@ -45804,7 +45655,7 @@ var MuteToggle = /*#__PURE__*/function (_Button) {
 
     _this = _Button.call(this, player, options) || this; // hide this control if volume support is missing
 
-    checkMuteSupport((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), player);
+    checkMuteSupport(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), player);
 
     _this.on(player, ['loadstart', 'volumechange'], _this.update);
 
@@ -45942,7 +45793,7 @@ Component.registerComponent('MuteToggle', MuteToggle);
  */
 
 var VolumePanel = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VolumePanel, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VolumePanel, _Component);
 
   /**
    * Creates an instance of this class.
@@ -46158,7 +46009,7 @@ Component.registerComponent('VolumePanel', VolumePanel);
  */
 
 var Menu = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Menu, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Menu, _Component);
 
   /**
    * Create an instance of this class.
@@ -46184,8 +46035,8 @@ var Menu = /*#__PURE__*/function (_Component) {
     _this.on('keydown', _this.handleKeyDown); // All the menu item instances share the same blur handler provided by the menu container.
 
 
-    _this.boundHandleBlur_ = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleBlur);
-    _this.boundHandleTapClick_ = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleTapClick);
+    _this.boundHandleBlur_ = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleBlur);
+    _this.boundHandleTapClick_ = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleTapClick);
     return _this;
   }
   /**
@@ -46449,7 +46300,7 @@ Component.registerComponent('Menu', Menu);
  */
 
 var MenuButton = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MenuButton, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MenuButton, _Component);
 
   /**
    * Creates an instance of this class.
@@ -46497,7 +46348,7 @@ var MenuButton = /*#__PURE__*/function (_Component) {
 
       _this.menu.show();
 
-      on((global_document__WEBPACK_IMPORTED_MODULE_1___default()), 'keyup', bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleMenuKeyUp));
+      on((global_document__WEBPACK_IMPORTED_MODULE_1___default()), 'keyup', bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleMenuKeyUp));
     });
 
     _this.on('mouseleave', _this.handleMouseLeave);
@@ -46886,7 +46737,7 @@ Component.registerComponent('MenuButton', MenuButton);
  */
 
 var TrackButton = /*#__PURE__*/function (_MenuButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TrackButton, _MenuButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TrackButton, _MenuButton);
 
   /**
    * Creates an instance of this class.
@@ -46908,10 +46759,10 @@ var TrackButton = /*#__PURE__*/function (_MenuButton) {
     }
 
     if (!tracks) {
-      return (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+      return _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
     }
 
-    var updateHandler = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update);
+    var updateHandler = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update);
     tracks.addEventListener('removetrack', updateHandler);
     tracks.addEventListener('addtrack', updateHandler);
     tracks.addEventListener('labelchange', updateHandler);
@@ -46952,7 +46803,7 @@ var MenuKeys = ['Tab', 'Esc', 'Up', 'Down', 'Right', 'Left'];
  */
 
 var MenuItem = /*#__PURE__*/function (_ClickableComponent) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MenuItem, _ClickableComponent);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MenuItem, _ClickableComponent);
 
   /**
    * Creates an instance of the this class.
@@ -47088,7 +46939,7 @@ Component.registerComponent('MenuItem', MenuItem);
  */
 
 var TextTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrackMenuItem, _MenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrackMenuItem, _MenuItem);
 
   /**
    * Creates an instance of this class.
@@ -47118,7 +46969,7 @@ var TextTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
         args[_key] = arguments[_key];
       }
 
-      _this.handleTracksChange.apply((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), args);
+      _this.handleTracksChange.apply(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), args);
     };
 
     var selectedLanguageChangeHandler = function selectedLanguageChangeHandler() {
@@ -47126,7 +46977,7 @@ var TextTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
         args[_key2] = arguments[_key2];
       }
 
-      _this.handleSelectedLanguageChange.apply((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), args);
+      _this.handleSelectedLanguageChange.apply(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), args);
     };
 
     player.on(['loadstart', 'texttrackchange'], changeHandler);
@@ -47271,7 +47122,7 @@ Component.registerComponent('TextTrackMenuItem', TextTrackMenuItem);
  */
 
 var OffTextTrackMenuItem = /*#__PURE__*/function (_TextTrackMenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(OffTextTrackMenuItem, _TextTrackMenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(OffTextTrackMenuItem, _TextTrackMenuItem);
 
   /**
    * Creates an instance of this class.
@@ -47374,7 +47225,7 @@ Component.registerComponent('OffTextTrackMenuItem', OffTextTrackMenuItem);
  */
 
 var TextTrackButton = /*#__PURE__*/function (_TrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrackButton, _TrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrackButton, _TrackButton);
 
   /**
    * Creates an instance of this class.
@@ -47469,7 +47320,7 @@ Component.registerComponent('TextTrackButton', TextTrackButton);
  */
 
 var ChaptersTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ChaptersTrackMenuItem, _MenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ChaptersTrackMenuItem, _MenuItem);
 
   /**
    * Creates an instance of this class.
@@ -47494,7 +47345,7 @@ var ChaptersTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
     _this = _MenuItem.call(this, player, options) || this;
     _this.track = track;
     _this.cue = cue;
-    track.addEventListener('cuechange', bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.update));
+    track.addEventListener('cuechange', bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.update));
     return _this;
   }
   /**
@@ -47549,7 +47400,7 @@ Component.registerComponent('ChaptersTrackMenuItem', ChaptersTrackMenuItem);
  */
 
 var ChaptersButton = /*#__PURE__*/function (_TextTrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ChaptersButton, _TextTrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ChaptersButton, _TextTrackButton);
 
   /**
    * Creates an instance of this class.
@@ -47752,7 +47603,7 @@ Component.registerComponent('ChaptersButton', ChaptersButton);
  */
 
 var DescriptionsButton = /*#__PURE__*/function (_TextTrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(DescriptionsButton, _TextTrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(DescriptionsButton, _TextTrackButton);
 
   /**
    * Creates an instance of this class.
@@ -47771,7 +47622,7 @@ var DescriptionsButton = /*#__PURE__*/function (_TextTrackButton) {
 
     _this = _TextTrackButton.call(this, player, options, ready) || this;
     var tracks = player.textTracks();
-    var changeHandler = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.handleTracksChange);
+    var changeHandler = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.handleTracksChange);
     tracks.addEventListener('change', changeHandler);
 
     _this.on('dispose', function () {
@@ -47856,7 +47707,7 @@ Component.registerComponent('DescriptionsButton', DescriptionsButton);
  */
 
 var SubtitlesButton = /*#__PURE__*/function (_TextTrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SubtitlesButton, _TextTrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SubtitlesButton, _TextTrackButton);
 
   /**
    * Creates an instance of this class.
@@ -47919,7 +47770,7 @@ Component.registerComponent('SubtitlesButton', SubtitlesButton);
  */
 
 var CaptionSettingsMenuItem = /*#__PURE__*/function (_TextTrackMenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(CaptionSettingsMenuItem, _TextTrackMenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(CaptionSettingsMenuItem, _TextTrackMenuItem);
 
   /**
    * Creates an instance of this class.
@@ -47983,7 +47834,7 @@ Component.registerComponent('CaptionSettingsMenuItem', CaptionSettingsMenuItem);
  */
 
 var CaptionsButton = /*#__PURE__*/function (_TextTrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(CaptionsButton, _TextTrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(CaptionsButton, _TextTrackButton);
 
   /**
    * Creates an instance of this class.
@@ -48067,7 +47918,7 @@ Component.registerComponent('CaptionsButton', CaptionsButton);
  */
 
 var SubsCapsMenuItem = /*#__PURE__*/function (_TextTrackMenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SubsCapsMenuItem, _TextTrackMenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SubsCapsMenuItem, _TextTrackMenuItem);
 
   function SubsCapsMenuItem() {
     return _TextTrackMenuItem.apply(this, arguments) || this;
@@ -48103,7 +47954,7 @@ Component.registerComponent('SubsCapsMenuItem', SubsCapsMenuItem);
  */
 
 var SubsCapsButton = /*#__PURE__*/function (_TextTrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SubsCapsButton, _TextTrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SubsCapsButton, _TextTrackButton);
 
   function SubsCapsButton(player, options) {
     var _this;
@@ -48193,7 +48044,7 @@ Component.registerComponent('SubsCapsButton', SubsCapsButton);
  */
 
 var AudioTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(AudioTrackMenuItem, _MenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(AudioTrackMenuItem, _MenuItem);
 
   /**
    * Creates an instance of this class.
@@ -48222,7 +48073,7 @@ var AudioTrackMenuItem = /*#__PURE__*/function (_MenuItem) {
         args[_key] = arguments[_key];
       }
 
-      _this.handleTracksChange.apply((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), args);
+      _this.handleTracksChange.apply(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), args);
     };
 
     tracks.addEventListener('change', changeHandler);
@@ -48300,7 +48151,7 @@ Component.registerComponent('AudioTrackMenuItem', AudioTrackMenuItem);
  */
 
 var AudioTrackButton = /*#__PURE__*/function (_TrackButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(AudioTrackButton, _TrackButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(AudioTrackButton, _TrackButton);
 
   /**
    * Creates an instance of this class.
@@ -48390,7 +48241,7 @@ Component.registerComponent('AudioTrackButton', AudioTrackButton);
  */
 
 var PlaybackRateMenuItem = /*#__PURE__*/function (_MenuItem) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PlaybackRateMenuItem, _MenuItem);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PlaybackRateMenuItem, _MenuItem);
 
   /**
    * Creates an instance of this class.
@@ -48473,7 +48324,7 @@ Component.registerComponent('PlaybackRateMenuItem', PlaybackRateMenuItem);
  */
 
 var PlaybackRateMenuButton = /*#__PURE__*/function (_MenuButton) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PlaybackRateMenuButton, _MenuButton);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PlaybackRateMenuButton, _MenuButton);
 
   /**
    * Creates an instance of this class.
@@ -48677,7 +48528,7 @@ Component.registerComponent('PlaybackRateMenuButton', PlaybackRateMenuButton);
  */
 
 var Spacer = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Spacer, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Spacer, _Component);
 
   function Spacer() {
     return _Component.apply(this, arguments) || this;
@@ -48720,7 +48571,7 @@ Component.registerComponent('Spacer', Spacer);
  */
 
 var CustomControlSpacer = /*#__PURE__*/function (_Spacer) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(CustomControlSpacer, _Spacer);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(CustomControlSpacer, _Spacer);
 
   function CustomControlSpacer() {
     return _Spacer.apply(this, arguments) || this;
@@ -48768,7 +48619,7 @@ Component.registerComponent('CustomControlSpacer', CustomControlSpacer);
  */
 
 var ControlBar = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ControlBar, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ControlBar, _Component);
 
   function ControlBar() {
     return _Component.apply(this, arguments) || this;
@@ -48817,7 +48668,7 @@ Component.registerComponent('ControlBar', ControlBar);
  */
 
 var ErrorDisplay = /*#__PURE__*/function (_ModalDialog) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ErrorDisplay, _ModalDialog);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ErrorDisplay, _ModalDialog);
 
   /**
    * Creates an instance of this class.
@@ -48874,7 +48725,7 @@ var ErrorDisplay = /*#__PURE__*/function (_ModalDialog) {
  */
 
 
-ErrorDisplay.prototype.options_ = (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2__.default)({}, ModalDialog.prototype.options_, {
+ErrorDisplay.prototype.options_ = _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_2___default()({}, ModalDialog.prototype.options_, {
   pauseOnOpen: false,
   fillAlways: true,
   temporary: false,
@@ -49052,7 +48903,7 @@ function setSelectedOption(el, value, parser) {
 
 
 var TextTrackSettings = /*#__PURE__*/function (_ModalDialog) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TextTrackSettings, _ModalDialog);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TextTrackSettings, _ModalDialog);
 
   /**
    * Creates an instance of this class.
@@ -49068,7 +48919,7 @@ var TextTrackSettings = /*#__PURE__*/function (_ModalDialog) {
 
     options.temporary = false;
     _this = _ModalDialog.call(this, player, options) || this;
-    _this.updateDisplay = bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), _this.updateDisplay); // fill the modal and pretend we have opened it
+    _this.updateDisplay = bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), _this.updateDisplay); // fill the modal and pretend we have opened it
 
     _this.fill();
 
@@ -49400,7 +49251,7 @@ Component.registerComponent('TextTrackSettings', TextTrackSettings);
  */
 
 var ResizeManager = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(ResizeManager, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(ResizeManager, _Component);
 
   /**
    * Create the ResizeManager.
@@ -49435,7 +49286,7 @@ var ResizeManager = /*#__PURE__*/function (_Component) {
     _this.resizeObserver_ = null;
     _this.debouncedHandler_ = debounce(function () {
       _this.resizeHandler();
-    }, 100, false, (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    }, 100, false, _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
 
     if (RESIZE_OBSERVER_AVAILABLE) {
       _this.resizeObserver_ = new _this.ResizeObserver(_this.debouncedHandler_);
@@ -49547,7 +49398,7 @@ var defaults = {
  */
 
 var LiveTracker = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(LiveTracker, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(LiveTracker, _Component);
 
   /**
    * Creates an instance of this class.
@@ -50270,7 +50121,7 @@ var defineLazyProperty = function defineLazyProperty(obj, key, getValue, setter)
  */
 
 var Html5 = /*#__PURE__*/function (_Tech) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Html5, _Tech);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Html5, _Tech);
 
   /**
   * Create an instance of this Tech.
@@ -52534,7 +52385,7 @@ var DEFAULT_BREAKPOINTS = {
  */
 
 var Player = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(Player, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(Player, _Component);
 
   /**
    * Create an instance of this class.
@@ -52688,7 +52539,7 @@ var Player = /*#__PURE__*/function (_Component) {
     _this.scrubbing_ = false;
     _this.el_ = _this.createEl(); // Make this an evented object and use `el_` as its event bus.
 
-    evented((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), {
+    evented(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), {
       eventBusKey: 'el_'
     }); // listen to document and player fullscreenchange handlers so we receive those events
     // before a user can receive them so we can update isFullscreen appropriately.
@@ -52769,7 +52620,7 @@ var Player = /*#__PURE__*/function (_Component) {
     } // Make player easily findable by ID
 
 
-    Player.players[_this.id_] = (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this); // Add a major version class to aid css in plugins
+    Player.players[_this.id_] = _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this); // Add a major version class to aid css in plugins
 
     var majorVersion = version.split('.')[0];
 
@@ -57579,7 +57430,7 @@ var createPluginFactory = function createPluginFactory(name, PluginSubClass) {
       args[_key] = arguments[_key];
     }
 
-    var instance = (0,_babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11__.default)(PluginSubClass, [this].concat(args)); // The plugin is replaced by a function that returns the current instance.
+    var instance = _babel_runtime_helpers_construct__WEBPACK_IMPORTED_MODULE_11___default()(PluginSubClass, [this].concat(args)); // The plugin is replaced by a function that returns the current instance.
 
 
     this[name] = function () {
@@ -58006,7 +57857,7 @@ var extend = function extend(superClass, subClassMethods) {
     subClass = subClassMethods;
   }
 
-  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12__.default)(subClass, superClass); // this is needed for backward-compatibility and node compatibility.
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_12___default()(subClass, superClass); // this is needed for backward-compatibility and node compatibility.
 
 
   if (superClass) {
@@ -58935,7 +58786,7 @@ var refreshDelay = function refreshDelay(media, update) {
 
 
 var PlaylistLoader = /*#__PURE__*/function (_EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(PlaylistLoader, _EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(PlaylistLoader, _EventTarget);
 
   function PlaylistLoader(src, vhs, options) {
     var _this;
@@ -61153,7 +61004,7 @@ var filterChangedSidxMappings = function filterChangedSidxMappings(master, oldSi
 };
 
 var DashPlaylistLoader = /*#__PURE__*/function (_EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(DashPlaylistLoader, _EventTarget); // DashPlaylistLoader must accept either a src url or a playlist because subsequent
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(DashPlaylistLoader, _EventTarget); // DashPlaylistLoader must accept either a src url or a playlist because subsequent
   // playlist loader setups from media groups will expect to be able to pass a playlist
   // (since there aren't external URLs to media playlists with DASH)
 
@@ -61166,7 +61017,7 @@ var DashPlaylistLoader = /*#__PURE__*/function (_EventTarget) {
     }
 
     _this = _EventTarget.call(this) || this;
-    _this.masterPlaylistLoader_ = masterPlaylistLoader || (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+    _this.masterPlaylistLoader_ = masterPlaylistLoader || _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
 
     if (!masterPlaylistLoader) {
       _this.isMaster_ = true;
@@ -72576,7 +72427,7 @@ var getTroublesomeSegmentDurationMessage = function getTroublesomeSegmentDuratio
 
 
 var SegmentLoader = /*#__PURE__*/function (_videojs$EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SegmentLoader, _videojs$EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SegmentLoader, _videojs$EventTarget);
 
   function SegmentLoader(settings, options) {
     var _this;
@@ -72690,7 +72541,7 @@ var SegmentLoader = /*#__PURE__*/function (_videojs$EventTarget) {
 
     _this.fetchAtBuffer_ = false;
     _this.logger_ = logger("SegmentLoader[" + _this.loaderType_ + "]");
-    Object.defineProperty((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), 'state', {
+    Object.defineProperty(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), 'state', {
       get: function get() {
         return this.state_;
       },
@@ -75296,7 +75147,7 @@ var onUpdateend = function onUpdateend(type, sourceUpdater) {
 
 
 var SourceUpdater = /*#__PURE__*/function (_videojs$EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SourceUpdater, _videojs$EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SourceUpdater, _videojs$EventTarget);
 
   function SourceUpdater(mediaSource) {
     var _this;
@@ -75305,7 +75156,7 @@ var SourceUpdater = /*#__PURE__*/function (_videojs$EventTarget) {
     _this.mediaSource = mediaSource;
 
     _this.sourceopenListener_ = function () {
-      return shiftQueue('mediaSource', (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+      return shiftQueue('mediaSource', _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
     };
 
     _this.mediaSource.addEventListener('sourceopen', _this.sourceopenListener_);
@@ -75322,8 +75173,8 @@ var SourceUpdater = /*#__PURE__*/function (_videojs$EventTarget) {
     _this.delayedAudioAppendQueue_ = [];
     _this.videoAppendQueued_ = false;
     _this.codecs = {};
-    _this.onVideoUpdateEnd_ = onUpdateend('video', (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this.onAudioUpdateEnd_ = onUpdateend('audio', (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this.onVideoUpdateEnd_ = onUpdateend('video', _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
+    _this.onAudioUpdateEnd_ = onUpdateend('audio', _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
 
     _this.onVideoError_ = function (e) {
       // used for debugging
@@ -75912,7 +75763,7 @@ var VTT_LINE_TERMINATORS = new Uint8Array('\n\n'.split('').map(function (_char3)
  */
 
 var VTTSegmentLoader = /*#__PURE__*/function (_SegmentLoader) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VTTSegmentLoader, _SegmentLoader);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VTTSegmentLoader, _SegmentLoader);
 
   function VTTSegmentLoader(settings, options) {
     var _this;
@@ -76613,7 +76464,7 @@ var syncPointStrategies = [// Stategy "VOD": Handle the VOD-case where the sync-
 }];
 
 var SyncController = /*#__PURE__*/function (_videojs$EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(SyncController, _videojs$EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(SyncController, _videojs$EventTarget);
 
   function SyncController(options) {
     var _this;
@@ -76968,7 +76819,7 @@ var SyncController = /*#__PURE__*/function (_videojs$EventTarget) {
 
 
 var TimelineChangeController = /*#__PURE__*/function (_videojs$EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(TimelineChangeController, _videojs$EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(TimelineChangeController, _videojs$EventTarget);
 
   function TimelineChangeController() {
     var _this;
@@ -78568,7 +78419,7 @@ var shouldSwitchToMedia = function shouldSwitchToMedia(_ref) {
 
 
 var MasterPlaylistController = /*#__PURE__*/function (_videojs$EventTarget) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(MasterPlaylistController, _videojs$EventTarget);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(MasterPlaylistController, _videojs$EventTarget);
 
   function MasterPlaylistController(options) {
     var _this;
@@ -78617,9 +78468,9 @@ var MasterPlaylistController = /*#__PURE__*/function (_videojs$EventTarget) {
 
     _this.mediaTypes_ = createMediaTypes();
     _this.mediaSource = new (global_window__WEBPACK_IMPORTED_MODULE_0___default().MediaSource)();
-    _this.handleDurationChange_ = _this.handleDurationChange_.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this.handleSourceOpen_ = _this.handleSourceOpen_.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this.handleSourceEnded_ = _this.handleSourceEnded_.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this.handleDurationChange_ = _this.handleDurationChange_.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
+    _this.handleSourceOpen_ = _this.handleSourceOpen_.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
+    _this.handleSourceEnded_ = _this.handleSourceEnded_.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
 
     _this.mediaSource.addEventListener('durationchange', _this.handleDurationChange_); // load the media source into the player
 
@@ -78717,7 +78568,7 @@ var MasterPlaylistController = /*#__PURE__*/function (_videojs$EventTarget) {
 
 
     loaderStats.forEach(function (stat) {
-      _this[stat + '_'] = sumLoaderStat.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this), stat);
+      _this[stat + '_'] = sumLoaderStat.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this), stat);
     });
     _this.logger_ = logger('MPC');
     _this.triggeredFmp4Usage = false;
@@ -81616,7 +81467,7 @@ var Component$1 = videojs$1.getComponent('Component');
  */
 
 var VhsHandler = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6__.default)(VhsHandler, _Component);
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_6___default()(VhsHandler, _Component);
 
   function VhsHandler(source, tech, options) {
     var _this;
@@ -81641,7 +81492,7 @@ var VhsHandler = /*#__PURE__*/function (_Component) {
               type: 'usage',
               name: 'hls-player-access'
             });
-            return (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+            return _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
           },
           configurable: true
         });
@@ -81655,7 +81506,7 @@ var VhsHandler = /*#__PURE__*/function (_Component) {
               type: 'usage',
               name: 'vhs-player-access'
             });
-            return (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+            return _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
           },
           configurable: true
         });
@@ -81665,7 +81516,7 @@ var VhsHandler = /*#__PURE__*/function (_Component) {
         Object.defineProperty(_player, 'dash', {
           get: function get() {
             videojs$1.log.warn('player.dash is deprecated. Use player.tech().vhs instead.');
-            return (0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this);
+            return _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this);
           },
           configurable: true
         });
@@ -84960,10 +84811,7 @@ var render = function() {
         [
           _vm._m(0),
           _vm._v(" "),
-          _c("router-view", {
-            attrs: { src: _vm.src, res: _vm.response },
-            on: { result: _vm.getResponse }
-          })
+          _c("router-view", { attrs: { src: _vm.src } })
         ],
         1
       ),
@@ -85097,47 +84945,17 @@ var staticRenderFns = [
                   staticClass: "dropdown-toggle",
                   attrs: { href: "#", "data-toggle": "dropdown" }
                 },
-                [
-                  _c("img", {
-                    staticClass: "user-image",
-                    attrs: { src: "", alt: "User Image" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "hidden-xs" }, [_vm._v("Juliemar")])
-                ]
+                [_c("span", { staticClass: "hidden-xs" }, [_vm._v("Juliemar")])]
               ),
               _vm._v(" "),
               _c("ul", { staticClass: "dropdown-menu" }, [
-                _c("li", { staticClass: "user-header" }, [
-                  _c("img", {
-                    staticClass: "img-circle",
-                    attrs: { src: "", alt: "User Image" }
-                  }),
-                  _vm._v("\n              s\n            ")
-                ]),
-                _vm._v(" "),
                 _c("li", { staticClass: "user-footer" }, [
-                  _c("div", { staticClass: "pull-left" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-default btn-flat",
-                        attrs: { href: "/users/change-password" }
-                      },
-                      [_vm._v("Change Password")]
-                    )
-                  ]),
-                  _vm._v(" "),
                   _c("div", { staticClass: "pull-right" }, [
                     _c(
                       "a",
                       {
                         staticClass: "btn btn-default btn-flat",
-                        attrs: {
-                          href: "",
-                          onclick:
-                            "event.preventDefault();\n                document.getElementById('logout-form').submit();"
-                        }
+                        attrs: { href: "" }
                       },
                       [_vm._v("Sign out")]
                     )

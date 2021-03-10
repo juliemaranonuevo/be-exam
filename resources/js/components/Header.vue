@@ -12,23 +12,14 @@
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="" class="user-image" alt="User Image">
               <span class="hidden-xs">Juliemar</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="user-header">
-                <img src="" class="img-circle" alt="User Image">
-                s
-              </li>
-              <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="/users/change-password" class="btn btn-default btn-flat">Change Password</a>
-                </div>
                 <div class="pull-right">
-                  <a href="" class="btn btn-default btn-flat" onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">Sign out</a>
+                  <a href="" class="btn btn-default btn-flat">Sign out</a>
                 </div>
+                
               </li>
             </ul>
           </li>
@@ -44,6 +35,9 @@ export default {
     name: 'Header',
     mounted() {
         console.log('Component mounted.')
+    },
+    method: {
+
     }
 }
 </script>

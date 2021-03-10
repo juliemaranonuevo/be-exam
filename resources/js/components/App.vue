@@ -13,7 +13,7 @@
                     <li class="active">Products</li>
                 </ol>
             </section>
-            <router-view :src="src" @result="getResponse" :res="response"></router-view>
+            <router-view :src="src"></router-view>
         </div>
         <Footer />
     </div>
