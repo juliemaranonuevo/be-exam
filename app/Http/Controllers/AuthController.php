@@ -20,28 +20,16 @@ class AuthController extends Controller
         
         $login = request()->input('login');
         $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-        // if ($fieldType == 'email') {
-        //     $request->validate([
-        //         'email' => 'required|string|email',
-        //         'password' => 'required|string'
-        //     ]);
-        // } else {
-        //     $request->validate([
-        //         'username' => 'required|string',
-        //         'password' => 'required|string'
-        //     ]);
-        // }
         
-
         request()->merge([$fieldType => $login]);
 
         $remember = $request->has('remember') ? true : false;
         
         $credentials = request([$fieldType, 'password']);
-     
+        
         if ( !Auth::attempt($credentials, $remember) ) {
           
-            return back()->withErrors('Invalid email or password')->withInput( $request->all );
+            return back()->with('custom_error_message','Invalid Credentials!')->withInput( $request->all );
 
         }
 

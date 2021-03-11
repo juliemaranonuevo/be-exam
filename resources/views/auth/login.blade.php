@@ -44,6 +44,13 @@
                         </button>
                     </div>
                 </div>
+
+                @if(session()->has('custom_error_message'))
+                    <div id="roll" class="alert alert-danger alert-dismissible" style="margin-top: 10px;">
+                        {!! Session::get('custom_error_message') !!}
+                    </div>
+                    <br>
+                @endif
             </form>
         </div>
     </div>
