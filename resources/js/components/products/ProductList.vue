@@ -172,7 +172,8 @@
 export default {
     name: 'ProductList',
     props: [
-        "res"
+        "res",
+        "displayResult"
     ],
     data() {
         return {
@@ -196,6 +197,17 @@ export default {
     mounted() {
         this.loadItem();
         this.loadCategories();
+
+        if (this.displayResult) {
+            if (this.displayResult === 'Added') {
+                this.message = 'New product has been added successfully.';
+            } else if (this.displayResult === 'Updated') {
+                this.message = 'Product has been updated successfully.';
+            }
+            this.alertClass = 'alert alert-success alert-dismissible';
+            this.notification = true;
+        }
+       
     },
     methods: {
         async loadItem() {

@@ -261,8 +261,8 @@ export default {
                     'Content-Type': 'application/json',
                 }
             })
-            .then((res) => {
-                this.$emit('result', res)
+            .then(() => {
+                this.$emit('result', 'Added')
                 this.$router.push({ path: '/products' });
                 this.resetForm();
             })

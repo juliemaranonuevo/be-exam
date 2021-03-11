@@ -3724,8 +3724,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                   }
-                }).then(function (res) {
-                  _this2.$emit('result', res);
+                }).then(function () {
+                  _this2.$emit('result', 'Added');
 
                   _this2.$router.push({
                     path: '/products'
@@ -3961,7 +3961,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   mounted: function mounted() {
     this.getProductDetail();
-    console.log(this.$route.params.productId);
   },
   methods: {
     getProductDetail: function getProductDetail() {
@@ -3980,14 +3979,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _yield$axios$get = _context.sent;
                 data = _yield$axios$get.data;
-                console.log(data.data.name);
                 _this.form.name = data.data.name;
                 _this.form.category = data.data.category;
                 _this.form.date = data.date;
                 _this.form.time = data.time;
                 _this.form.description = data.data.description;
 
-              case 10:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -4016,15 +4014,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                   }
-                }).then(function (res) {
+                }).then(function () {
+                  _this2.$emit('result', 'Updated');
+
                   _this2.$router.push({
                     path: '/products'
-                  });
+                  }); // this.errorMessage = false;
+                  // this.message = res.data.message;
+                  // this.alertClass = 'alert alert-success alert-dismissible';
 
-                  console.log(res.data.message);
-                  _this2.errorMessage = false;
-                  _this2.message = res.data.message;
-                  _this2.alertClass = 'alert alert-success alert-dismissible';
                 })["catch"](function (err) {
                   console.log(err);
                   _this2.errorMessage = true;
@@ -4033,11 +4031,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 8:
-                _this2.getProductDetail();
-
+                // this.getProductDetail();
                 _this2.notification = true;
 
-              case 10:
+              case 9:
               case "end":
                 return _context2.stop();
             }
@@ -4058,8 +4055,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   computed: {
-    getId: function getId() {
-      console.log(useRoute.params.productId);
+    getId: function getId() {// console.log(useRoute.params.productId);
     }
   }
 });
@@ -4256,7 +4252,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'ProductList',
-  props: ["res"],
+  props: ["res", "displayResult"],
   data: function data() {
     return {
       items: {
@@ -4279,6 +4275,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   mounted: function mounted() {
     this.loadItem();
     this.loadCategories();
+
+    if (this.displayResult) {
+      if (this.displayResult === 'Added') {
+        this.message = 'New product has been added successfully.';
+      } else if (this.displayResult === 'Updated') {
+        this.message = 'Product has been updated successfully.';
+      }
+
+      this.alertClass = 'alert alert-success alert-dismissible';
+      this.notification = true;
+    }
   },
   methods: {
     loadItem: function loadItem() {
@@ -4564,7 +4571,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Product'
+  name: 'Product',
+  data: function data() {
+    return {
+      displayResult: ''
+    };
+  },
+  methods: {
+    res: function res(_res) {
+      this.displayResult = _res;
+    }
+  }
 });
 
 /***/ }),
@@ -86436,7 +86453,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xs-12 col-md-12" }, [_c("router-view")], 1)
+      _c(
+        "div",
+        { staticClass: "col-xs-12 col-md-12" },
+        [
+          _c("router-view", {
+            attrs: { displayResult: _vm.displayResult },
+            on: { result: _vm.res }
+          })
+        ],
+        1
+      )
     ])
   ])
 }

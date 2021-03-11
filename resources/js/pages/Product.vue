@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                <router-view/>
+                <router-view @result="res" :displayResult="displayResult"/>
             </div>
         </div>
     </div>
@@ -12,6 +12,16 @@
 
 export default {
     name: 'Product',
+    data() {
+        return {
+            displayResult:''
+        }
+    },
+    methods: {
+        res(res) {
+            this.displayResult = res;
+        }
+    }
 }
 </script>
 <style lang="scss">

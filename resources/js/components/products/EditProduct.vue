@@ -176,20 +176,16 @@ export default {
 
     mounted() {
         this.getProductDetail();
-        console.log(this.$route.params.productId);
     },
 
     methods: {  
         async getProductDetail() {
             const {data} = await axios.get(`/api/v1/products/${this.$route.params.productId}/edit`);
-            console.log(data.data.name);
-
             this.form.name = data.data.name;
             this.form.category = data.data.category;
             this.form.date = data.date;
             this.form.time = data.time;
             this.form.description = data.data.description;
-
         },
 
         async submit() {
@@ -206,12 +202,12 @@ export default {
                     'Content-Type': 'application/json',
                 }
             })
-            .then((res) => {
+            .then(() => {
+                this.$emit('result', 'Updated')
                 this.$router.push({ path: '/products' });
-                console.log(res.data.message);
-                this.errorMessage = false;
-                this.message = res.data.message;
-                this.alertClass = 'alert alert-success alert-dismissible';
+                // this.errorMessage = false;
+                // this.message = res.data.message;
+                // this.alertClass = 'alert alert-success alert-dismissible';
             })
             .catch((err) => {
                 console.log(err);
@@ -220,7 +216,7 @@ export default {
                 this.alertClass = 'alert alert-danger alert-dismissible';
             });
 
-            this.getProductDetail();
+            // this.getProductDetail();
             this.notification = true;
         },
 
@@ -240,7 +236,7 @@ export default {
 
     computed: {
         getId() {
-            console.log(useRoute.params.productId);
+            // console.log(useRoute.params.productId);
         }
     }
 }
