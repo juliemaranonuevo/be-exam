@@ -86118,7 +86118,7 @@ var render = function() {
               },
               [
                 _c("option", { attrs: { value: "All", selected: "" } }, [
-                  _vm._v("All")
+                  _vm._v("All Categories")
                 ]),
                 _vm._v(" "),
                 _vm._l(_vm.categories, function(category, index) {

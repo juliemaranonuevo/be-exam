@@ -37,7 +37,7 @@
                             @change="selectCategory"
                             v-model="selectOptionValue"
                         >
-                            <option value="All" selected>All</option>
+                            <option value="All" selected>All Categories</option>
                             <option 
                                 v-for="(category, index) in categories"
                                 :key="index"
