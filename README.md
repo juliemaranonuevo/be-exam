@@ -4,7 +4,7 @@
 To use laravel dependencies existing in composer.json.
 
 ```bash
-composer intall
+composer install
 ```
 
 ## Database
@@ -21,13 +21,19 @@ DB_PASSWORD=
 Step 2:
 Create new database # db_praxxys_exam
 ```
+## Storage/Public Folder
+To connect storage to public
+
+```bash
+php artisan storage:link
+```
 
 ## Migration
 Open cmd terminal inside the project and run this command to reflect
 changes in database
 
 ```bash
-php atisan migrate
+php artisan migrate
 # returns 'Dropped all tables successfully.'
 # returns 'Migration table created successfully.'
 # returns 'Migrating: 2014_10_12_000000_create_users_table'
@@ -42,7 +48,6 @@ initial data
 ```bash
 php artisan db:seed --class DatabaseSeeder # returns 'Database seeding completed successfully.'
 ```
-
 
 ## Vue Js
 To use vuejs dependencies and devDependencies existing in package.json
